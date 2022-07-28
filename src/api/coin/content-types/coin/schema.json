@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "coins",
+  "info": {
+    "singularName": "coin",
+    "pluralName": "coins",
+    "displayName": "Coin",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "value": {
+      "type": "integer",
+      "required": true
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "coins"
+    }
+  }
+}
